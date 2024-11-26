@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Inlämningsuppgift\style\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.css" integrity="sha512-5gTxhbmgsOKfPP2+TeKslkMmyxF0Cmyr2YrJrfaXD/ChLHavFXGzDDG9ZiOca1P/2/5nXuujkB2BWymVKu1pPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js" integrity="sha512-Vtot07oogPy4e0JzAfUgyvia0fATgR1PWWNG89EeQgPXmaIhjGQIFijUVxRn0TScCMCH57Y7eJSixmYYDJkJ1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Beställ</title>
+    <style type="text/tailwindcss">
+    </style>
+</head>
+<!-- ------------------------------------- -->
+<body>
+    <header class="bg-black h-16 p-1 pt-6 lg:w-screen">
+        <a href="/Inlämningsuppgift\index.html"><img class="flex w-32 h-32 lg:justify-center" src="/Inlämningsuppgift\bilder\SKOHYLLAN-removebg-preview.png" alt="Skohyllan logo"></a>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    </header>
+<!-- Nav -->
+    <nav class="navbar lg:text-xl" id="navbar">
+        <ul class="navbar-links" id="navbar-links">
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded" href="/Inlämningsuppgift\index.html">HEM</a></li></button>
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded"href="#jumpto">SKOR</a></li></button>
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded"href="/Inlämningsuppgift\pages\FAQ.html">FAQ</a></li></button>
+            <button><li><a class="nav-active block px-4 transition-transform duration-300 hover:scale-110 rounded"href="/Inlämningsuppgift\pages\order.html">BESTÄLL</a></li></button>
+        </ul>
+    </nav>
+<!-- Sök -->
+    <search class="relative w-full">
+        <input class="bg-gray-300 w-full py-2 pl-10" type="text" id="search" placeholder="Sök">
+        <img class="absolute left-2 top-1/2 transform -translate-y-1/2 w-5 h-5" src="/Inlämningsuppgift/bilder/search-icon-2048x2048-cmujl7en.png" alt="Search icon">
+    </search>
+<!-- BESTÄLLNING FORMULÄR -->
+<form>
+    <fieldset class="form mb-8 md:m-12 md:mx-96">
+        <legend>BESTÄLLNING</legend>
+        <br>
+        <!-- Förnamn -->
+            <label for="firstname">Förnamn:</label>
+            <input type="text" id="firstname" required maxlength="15">
+        <!-- Efternamn -->
+
+            <label for="lastname">Efternamn:</label>
+            <input type="text" id="lastname" required maxlength="15">
+        <!-- Email -->
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" max="25" required>
+        <!-- Mobilnummer -->
+
+            <label for="phone">Mobilnummer:</label>
+            <input type="tel" id="phone" required>
+        <!-- Antal -->
+
+            <label for="quantity">Antal:</label>
+            <input type="number" id="quantity" min="1" max="10" required>
+        <!-- Leveransdatum -->
+            <label for="delivery">Leveransdatum:</label>
+            <input type="date" id="delivery" required>
+        <!-- Leveransbolag -->
+            <select class="delivery" name="delivery">
+                <option value="">Vilket leveransbolag?</option>
+                <option value="Postnord">Postnord</option>
+                <option value="Instabox">Instabox</option>
+                <option value="Early Bird">Early Bird</option>
+                <option value="DHL">DHL</option>
+                <option value="Budbee">Budbee</option>
+                <option value="UPS">UPS</option>
+            </select>
+            <!-- Betalning -->
+            <span>Vilken betalningsmetod?</span>
+            <div class="payment">
+                <input class="payment" type="radio" id="Klarna" value="Klarna" name="Payment">
+                <label class="payment" for="Payment">Klarna</label>
+                <input class="payment" type="radio" id="PayPal" value="PayPal" name="Payment">
+                <label class="payment" for="Payment">PayPal</label>
+                <input class="payment" type="radio" id="Kort" value="Kort" name="Payment">
+                <label class="payment" for="Payment">Kort</label>
+            </div>
+            <!-- Villkor -->
+            <span>Godkänner du villkoren?</span>
+                <input type="checkbox" id="villkor" name="Ja">
+                <label for="Ja">Ja</label>
+                <br>
+            <button class="buy-button-2">KÖP</button>
+        </fieldset>
+    </form>
+<footer class="bg-black">
+    <div class="socials">
+        <span id="copyright">&#169;SkoHyllan AB</span>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+<!-- ----------------------------------- -->
+<script>
+    // Funktion för att visa/gömma menyn vid klick
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("open");
+    }
+</script>
+</body>
+</html>

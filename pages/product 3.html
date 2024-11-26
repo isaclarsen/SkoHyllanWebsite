@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Inlämningsuppgift\style\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.css" integrity="sha512-5gTxhbmgsOKfPP2+TeKslkMmyxF0Cmyr2YrJrfaXD/ChLHavFXGzDDG9ZiOca1P/2/5nXuujkB2BWymVKu1pPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js" integrity="sha512-Vtot07oogPy4e0JzAfUgyvia0fATgR1PWWNG89EeQgPXmaIhjGQIFijUVxRn0TScCMCH57Y7eJSixmYYDJkJ1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>Produkt</title>
+    <style type="text/tailwindcss">
+    </style>
+</head>
+<!-- --------------------------------------- -->
+<body>
+    <header class="bg-black h-16 p-1 pt-6 lg:w-screen">
+        <a href="/Inlämningsuppgift\index.html"><img class="flex w-32 h-32 lg:justify-center" src="/Inlämningsuppgift\bilder\SKOHYLLAN-removebg-preview.png" alt="Skohyllan logo"></a>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    </header>
+<!-- Nav -->
+    <nav class="navbar lg:text-xl" id="navbar">
+        <ul class="navbar-links" id="navbar-links">
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded" href="/Inlämningsuppgift\index.html">HEM</a></li></button>
+            <button><li><a class="nav-active block px-4 transition-transform duration-300 hover:scale-110 rounded"href="#jumpto">SKOR</a></li></button>
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded"href="/Inlämningsuppgift\pages\FAQ.html">FAQ</a></li></button>
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded"href="/Inlämningsuppgift\pages\order.html">BESTÄLL</a></li></button>
+        </ul>
+    </nav>
+<!-- Sök -->
+    <search class="relative w-full">
+        <input class="bg-gray-300 w-full py-2 pl-10" type="text" id="search" placeholder="Sök">
+        <img class="absolute left-2 top-1/2 transform -translate-y-1/2 w-5 h-5" src="/Inlämningsuppgift/bilder/search-icon-2048x2048-cmujl7en.png" alt="Search icon">
+    </search>
+<!-- PRODUKT -->
+<section class="product-main md:flex md:space-x-8">
+    <div class="product-image md:w-1/2">
+        <div class="gallery">
+            <a href="/Inlämningsuppgift\bilder\Jordan 1 blå\Jordan 1 blå.png" class="visible"><img src="/Inlämningsuppgift\bilder\Jordan 1 blå\Jordan 1 blå.png" alt="Jordan 1 Blue 1"></a>
+            <a href="/Inlämningsuppgift\bilder\Jordan 1 blå\jordan 1 blå 2.webp" class="hidden"><img src="/Inlämningsuppgift\bilder\Jordan 1 blå\jordan 1 blå 2.webp" alt="Jordan 1 Blue 2"></a>
+            <a href="/Inlämningsuppgift\bilder\Jordan 1 blå\jordan 1 blå 3.webp" class="hidden"><img src="/Inlämningsuppgift\bilder\Jordan 1 blå\jordan 1 blå 3.webp" alt="Jordan 1 Blue 3"></a>
+        </div>
+    </div>
+<!-- PRODUKT-TEXT -->
+    <div class="product-info md:w-1/2 flex flex-col">
+        <h1 class="text-4xl font-semibold mb-4 md:text-5xl">Jordan 1 Retro High Off-White UNC</h1>
+        <span class="font-bold text-2xl mb-4">1,999:-</span>
+        <p class="text-gray-600 mb-6 md:text-xl">Time for some Tobacco Road vibes with these Jordan 1 Retro Off-Whites. Also known as the "UNC" editions.</p>
+
+<!-- SIZE och KÖP -->
+        <div class="product-page-buy">
+            <label for="size-select" class="font-semibold">Storlek:</label>
+            <select id="size-select" class="product-size-select">
+                <option value="">Välj storlek</option>
+                <option value="EU-40">40</option>
+                <option value="EU-41">41</option>
+                <option value="EU-42">42</option>
+                <option value="EU-43">43</option>
+                <option value="EU-44">44</option>
+                <option value="EU-45">45</option>
+            </select>
+            <a href="/Inlämningsuppgift\pages\order.html">
+                <button class="product-buy-button bg-black text-white py-2 px-4 rounded hover:bg-gray-800">KÖP</button>
+            </a>
+        </div>
+    </div>
+</section>
+<!-- LIKNANDE PRODUKTER -->
+<section class="news">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl">LIKNANDE PRODUKTER:</h2>
+<!-- Röd jordan -->
+<div class="product-info lg:mb-4">
+    <img class="md:w-64"src="/Inlämningsuppgift\bilder\Jordan 1 chicago\jordan 1 sko.webp" width="200px" alt="Jordan 1 Chicago">
+    <div class="product-text">
+        <a href="/Inlämningsuppgift\pages\product.html"><h3 class="sm:text-xl md:text-3xl md:mt-4 text-xl font-bold">Jordan 1 Retro High Off-White Chicago</h3></a>
+        <span class="font-bold sm:text-base md:text-xl animate-bounce">1 999:-</span>
+        <p class="sm:text-base md:text-xl">The Off-White x Air Jordan 1 Retro High OG was one of the most highly anticipated footwear collaborations of 2017.</p>
+        <select class="size-select md:text-xl">
+            <option value="">Välj storlek</option>
+            <option value="EU-40">40</option>
+            <option value="EU-41">41</option>
+            <option value="EU-42">42</option>
+            <option value="EU-43">43</option>
+            <option value="EU-44">44</option>
+            <option value="EU-45">45</option>
+        </select>
+        <div class="mt-2">
+            <a class="buy-button sm:block sm:ml-0 sm:mt-2 md:block md:text-xl md:mt-2 md:ml-0 lg:inline" href="/Inlämningsuppgift\pages\product.html">KÖP</a>
+        </div>
+    </div>
+</div>
+<!-- Gul jordan -->
+<div class="product-info">
+    <img class="yellow-shoe md:w-64" src="/Inlämningsuppgift\bilder\Jordan 1 yellow\jordan 1 yellow.jpg" width="200px" height="200px" alt="Jordan 1 Yellow">
+    <div class="product-text">
+        <a href="/Inlämningsuppgift\pages\product 2.html"><h3 class="sm:text-xl md:text-3xl md:mt-4 text-xl font-bold">Jordan 1 Retro High Off-White Yellow</h3></a>
+        <span class="font-bold sm:text-base md:text-xl">1 999:-</span>
+        <p class="sm:text-base md:text-xl">The Off-White x Air Jordan 1 features a mix of White and Yellow hues, staying true to Off-Whites signature deconstructed aesthetic.</p>
+        <select class="size-select md:text-xl">
+            <option value="">Välj storlek</option>
+            <option value="EU-40">40</option>
+            <option value="EU-41">41</option>
+            <option value="EU-42">42</option>
+            <option value="EU-43">43</option>
+            <option value="EU-44">44</option>
+            <option value="EU-45">45</option>
+        </select>
+        <div class="mt-2">
+            <a class="buy-button sm:block sm:ml-0 sm:mt-2 md:block md:text-xl md:mt-2 md:ml-0 lg:inline" href="/Inlämningsuppgift\pages\product 2.html">KÖP</a>
+        </div>
+    </div>
+</div>
+<!-- Blå jordan -->
+<div class="product-info">
+    <img class="blue-shoe md:w-60" src="/Inlämningsuppgift\bilder\Jordan 1 blå\Jordan 1 blå.png" width="185px" alt="Jordan 1 Blue">
+    <div class="product-text">
+        <a href="/Inlämningsuppgift\pages\product 3.html"><h3 class="sm:text-xl md:text-3xl md:mt-4 text-xl font-bold">Jordan 1 Retro High Off-White UNC</h3></a>
+        <span class="font-bold sm:text-base md:text-xl">1 999:-</span>
+        <p class="sm:text-base md:text-xl">Time for some Tobacco Road vibes with these Jordan 1 Retro Off-Whites. Also known as the "UNC" editions.</p>
+        <select class="size-select md:text-xl">
+            <option value="">Välj storlek</option>
+            <option value="EU-40">40</option>
+            <option value="EU-41">41</option>
+            <option value="EU-42">42</option>
+            <option value="EU-43">43</option>
+            <option value="EU-44">44</option>
+            <option value="EU-45">45</option>
+        </select>
+        <div class="mt-2">
+            <a class="buy-button sm:block sm:ml-0 sm:mt-2 md:block md:text-xl md:mt-2 md:ml-0 lg:inline" href="/Inlämningsuppgift\pages\product 3.html">KÖP</a>
+        </div>
+    </div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black">
+    <div class="socials">
+        <span id="copyright">&#169;SkoHyllan AB</span>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+    <script type="text/javascript">
+        new SimpleLightbox('.gallery a', { nav: true, animationSpeed: 300 });
+                // Funktion för att visa/gömma menyn vid klick
+                function toggleMenu() {
+            var navbar = document.getElementById("navbar");
+            navbar.classList.toggle("open");
+        }
+    </script>
+</body>
+</html>

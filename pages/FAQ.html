@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv-SE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Inlämningsuppgift\style\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.css" integrity="sha512-5gTxhbmgsOKfPP2+TeKslkMmyxF0Cmyr2YrJrfaXD/ChLHavFXGzDDG9ZiOca1P/2/5nXuujkB2BWymVKu1pPg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.14.3/simple-lightbox.min.js" integrity="sha512-Vtot07oogPy4e0JzAfUgyvia0fATgR1PWWNG89EeQgPXmaIhjGQIFijUVxRn0TScCMCH57Y7eJSixmYYDJkJ1A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>FAQ</title>
+    <style type="text/tailwindcss">
+    </style>
+</head>
+<!-- ------------------------------------- -->
+<body>
+    <header class="bg-black h-16 p-1 pt-6 lg:w-screen">
+        <a href="/Inlämningsuppgift\index.html"><img class="flex w-32 h-32 lg:justify-center" src="/Inlämningsuppgift\bilder\SKOHYLLAN-removebg-preview.png" alt="Skohyllan logo"></a>
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    </header>
+<!-- Nav -->
+    <nav class="navbar lg:text-xl" id="navbar">
+        <ul class="navbar-links" id="navbar-links">
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded" href="/Inlämningsuppgift\index.html">HEM</a></li></button>
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded"href="#jumpto">SKOR</a></li></button>
+            <button><li><a class="nav-active block px-4 transition-transform duration-300 hover:scale-110 rounded"href="/Inlämningsuppgift\pages\FAQ.html">FAQ</a></li></button>
+            <button><li><a class="block px-4 transition-transform duration-300 hover:scale-110 rounded"href="/Inlämningsuppgift\pages\order.html">BESTÄLL</a></li></button>
+        </ul>
+    </nav>
+<!-- Sök -->
+    <search class="relative w-full">
+        <input class="bg-gray-300 w-full py-2 pl-10" type="text" id="search" placeholder="Sök">
+        <img class="absolute left-2 top-1/2 transform -translate-y-1/2 w-5 h-5" src="/Inlämningsuppgift/bilder/search-icon-2048x2048-cmujl7en.png" alt="Search icon">
+    </search>
+<!-- FAQ -->
+<section class="faq">
+    <h1>FAQ</h1>
+    <div>
+        <span class="question">Hur kan jag köpa skor från er plattform?</span>
+        <p class="answer">Du kan enkelt bläddra bland våra skor, välja den du vill köpa, lägga den i varukorgen och följa kassan för att slutföra ditt köp.</p>
+        <br>
+        <span class="question">Vilka betalningsmetoder accepterar ni?</span>
+        <p class="answer">Vi accepterar kreditkort, PayPal, Swish och fakturabetalning genom Klarna.</p>
+        <br>
+        <span class="question">Hur lång är leveranstiden?</span>
+        <p class="answer">Leveranstiden varierar beroende på din plats, men standardleverans tar vanligtvis mellan 3–5 arbetsdagar.</p>
+        <br>
+        <span class="question">Vad kostar frakten?</span>
+        <p class="answer">Fraktkostnaden är gratis för beställningar över 500 kr. För beställningar under detta belopp tillkommer en fraktavgift på 50 kr.</p>
+        <br>
+        <span class="question">Kan jag returnera eller byta skor?</span>
+        <p class="answer">Ja, du kan returnera eller byta skor inom 30 dagar efter leverans så länge de är i oanvänt skick och i originalförpackningen.</p>
+        <br>
+        <span class="question">Hur fungerar köpet av begagnade skor?</span>
+        <p class="answer">När du köper begagnade skor inspekterar vi dem noggrant för kvalitet och skick. Dessa skor säljs till reducerade priser och specificerat skick.</p>
+        <br>
+        <span class="question">Är alla skor ni säljer autentiska?</span>
+        <p class="answer">Ja, vi säkerställer att alla skor, både nya och begagnade, är 100 % autentiska genom att kontrollera varje produkt noggrant.</p>
+    </div>
+</section>
+<footer class="bg-black">
+    <div class="socials">
+        <span id="copyright">&#169;SkoHyllan AB</span>
+        <a href="#">Instagram</a>
+        <a href="#">TikTok</a>
+        <a href="#">Twitter</a>
+    </div>
+</footer>
+<script>
+    // Funktion för att visa/gömma menyn vid klick
+    function toggleMenu() {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("open");
+    }
+</script>
+</body>
+</html>

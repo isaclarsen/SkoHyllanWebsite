@@ -1,0 +1,369 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #ffe600;
+    --button-color: #000000;
+}
+
+@layer components {
+    .titel {
+    @apply text-2xl;
+    }
+   }
+/* ---------------------------------------- */
+/* Styla navbar */
+.navbar {
+    background-color: #000000;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+}
+
+.navbar a:not(.nav-active) {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgb(153, 153, 153);
+}
+
+.nav-active {
+    color: var(--primary-color);
+    margin-left: 6px;
+}
+
+/* Hamburgermenyn */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    color: var(--primary-color);
+    padding: 14px 20px;
+    cursor: pointer;
+    position:sticky;
+    top: 0;
+    z-index: 49;
+}
+
+.navbar-links {
+    display: flex;
+}
+
+/* För små skärmar */
+@media (max-width: 767px) {
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .navbar.open .navbar-links {
+        display: flex;
+    }
+
+    .navbar-links a {
+        text-align: center;
+        padding: 14px;
+        float: none;
+        display: flex;
+    }
+}
+/* FOOTER */
+footer {
+    bottom: 0;
+    width: 100%;
+}
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+}
+
+/* BANNER */
+.banner img {
+    margin-bottom: -140px; 
+
+    /* margin-top: -40px; */
+}
+
+.banner h1 {
+    margin: 10px;
+    font-family: "oswald", sans-serif;
+    font-weight: 600;
+}
+
+.banner p {
+    margin: 10px;
+    font-family: "oswald", sans-serif;
+    font-weight: 400;
+}
+
+.socials {
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 10px;
+    opacity: 0.8;
+    padding: 12px;
+    align-items: baseline;
+}
+
+a:hover{
+   color: rgb(155, 152, 152);
+    
+}
+
+#copyright {
+    font-size: 8px;
+}
+
+/* ------------------------------------------- */
+/* STARTSIDA PRODUKTER */
+.product-info {
+    display: flex;
+    align-items: start; /* Så produktbilder inte stretchas*/
+    margin: 10px;
+    margin-bottom: 60px;
+    font-family: "Inter", sans-serif;
+}
+
+.product-info span {
+    background-color:  var(--primary-color);
+    color: rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.product-info img {
+    margin-right: 15px;
+    /* border: 2px solid red; */
+}
+
+.product-info h3 {
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.product-info p {
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    background-color: var(--primary-color);
+    color:var(--button-color);
+    margin-right: 5px;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.product-info button:hover {
+    background-color: rgb(153, 153, 153);
+    
+}
+
+.news h2 {
+    margin: 10px;
+    margin-top: 100px;
+    font-family: "oswald", sans-serif;
+    font-weight: 400;
+    text-decoration: overline;
+}
+
+.favorites h2 {
+    margin: 10px;
+    margin-top: 50px;
+    font-family: "oswald", sans-serif;
+    font-weight: 400;
+    text-decoration: overline;
+}
+
+.size-select {
+    background-color:var(--primary-color);
+    color: var(--button-color);
+    font-weight: 600;
+    padding: 3px;
+    border-radius: 5px;
+}
+
+.blue-shoe {
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.yellow-shoe {
+    margin-top: 25px;
+}
+/* ------------------------------------------- */
+/* PRODUKTSIDA */
+
+.product-main {
+    margin: 15px;
+}
+
+.product-main {
+    margin-top: 25px;
+    font-family: "oswald", sans-serif;
+}
+
+#red-shoe {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.product-page-buy {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.product-size-select {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.product-page-info {
+    font-family: "Inter", sans-serif;
+} 
+
+.product-page-info p {
+    font-weight: 300;
+} 
+
+.product-buy-button {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+/* ------------------------------------------- */
+/* FAQ */
+
+.faq {
+    margin: 10px;
+}
+
+.faq h1 {
+    font-family: "oswald", sans-serif;
+    font-size: 32px;
+    text-align: center;
+}
+
+.faq div {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.question {
+    font-family: "oswald", sans-serif;
+    font-size: 22px;
+}
+
+.answer {
+    font-family: "Inter", sans-serif;
+}
+/* ------------------------------------------- */
+/* BESTÄLLNINGSSIDA */
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+legend {
+    text-align: center;
+    font-family: "oswald", sans-serif;
+    font-size: 36px;
+} 
+
+.form {
+    /* font-family: "Inter", sans-serif;
+    font-size: 24px; */
+    background-color: rgb(253, 250, 246);
+}
+
+.form input:not(.payment) {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.form label:not(.payment) {
+    margin-left: 20px;
+}
+
+.form span {
+    margin-left: 20px;
+}
+
+ .payment {
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+
+.delivery {
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.buy-button-2 {
+    width: 100%;
+    margin-top: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.buy-button-2:hover {
+    background-color: #2b2a2a;
+}
+
+#villkor {
+    margin-right: 360px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+@media (min-width: 1024px) {
+    #villkor {
+        margin-right: 700px;
+    }
+}
